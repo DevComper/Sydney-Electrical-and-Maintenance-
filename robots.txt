@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /service-areas/suburb-template.html
+Sitemap: https://sydneyelectricalmaintenance.com.au/sitemap.xml
