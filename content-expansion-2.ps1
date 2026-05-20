@@ -29,22 +29,6 @@ function Get-HeadingText {
 
 Insert-UniqueBlock -Path (Join-Path $site 'index.html') -Marker 'homepage-depth-2' -Block @'
     <section class="section homepage-depth-2">
-      <div class="container split">
-        <div class="reveal">
-          <h2 class="section-title">What makes a better electrical page</h2>
-          <p class="section-lead">Strong service pages do four things at once. They explain the work, they show the warning signs, they answer the pricing and timing questions, and they tell the reader what to do next.</p>
-          <p>That is why the homepage also needs more than a quick hero and a few cards. It should show the reader that the company handles emergency work, planned work, home work, and commercial work with enough depth to be trusted before the phone call happens.</p>
-          <p>We are building the site that way on purpose. The goal is to make it feel like a real local business site with enough detail for customers and search engines to understand the service offering properly.</p>
-        </div>
-        <div class="highlight-band reveal">
-          <h3>Need a quick path?</h3>
-          <p>If you already know the issue, jump straight to the relevant service page. If not, call and we will narrow it down with you.</p>
-          <a class="btn btn-primary" href="services.html">Browse services</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section homepage-depth-2">
       <div class="container grid">
         <article class="card reveal">
           <h3>Emergency faults</h3>
@@ -99,20 +83,6 @@ Insert-UniqueBlock -Path (Join-Path $site 'services.html') -Marker 'services-dep
 '@
 
 Insert-UniqueBlock -Path (Join-Path $site 'service-areas.html') -Marker 'service-areas-depth-2' -Block @'
-    <section class="section service-areas-depth-2">
-      <div class="container split">
-        <div class="reveal">
-          <h2 class="section-title">What suburb pages should add</h2>
-          <p class="section-lead">A suburb page should not just repeat the same company bio with a different place name. It should give a reader a reason to trust that the business works in that area often enough to understand the common property types and common faults.</p>
-          <p>That can mean talking about apartments, terraces, family homes, or commercial buildings in a way that feels specific to the area. It also means explaining response speed, coverage, and the type of electrical work most likely to come up there.</p>
-        </div>
-        <div class="highlight-band reveal">
-          <h3>Coverage that feels local</h3>
-          <p>Every suburb page should make it obvious that the team services the area, not just the city in general.</p>
-          <a class="btn btn-primary" href="contact.html">Check a suburb</a>
-        </div>
-      </div>
-    </section>
 '@
 
 Insert-UniqueBlock -Path (Join-Path $site 'blog.html') -Marker 'blog-hub-depth-2' -Block @'

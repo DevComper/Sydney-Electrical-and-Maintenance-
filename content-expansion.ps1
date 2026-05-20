@@ -159,39 +159,6 @@ Insert-BlockBeforeMainEnd -Path $servicesHub -Marker 'services-expansion' -Block
 '@
 
 $serviceAreasHub = Join-Path $site 'service-areas.html'
-Insert-BlockBeforeMainEnd -Path $serviceAreasHub -Marker 'service-areas-expansion' -Block @'
-    <section class="section service-areas-expansion">
-      <div class="container split">
-        <div class="reveal">
-          <h2 class="section-title">Why suburb pages matter</h2>
-          <p class="section-lead">Local pages should do more than list a suburb name. They need to explain what types of properties are common there, what problems people usually call about, and why a nearby electrician is useful in the first place.</p>
-          <p>That gives the page more SEO value and gives the reader more confidence. If someone is searching a suburb-specific electrician page, they are usually trying to answer one of two things: do you service here, and can you solve my exact problem quickly?</p>
-        </div>
-        <div class="highlight-band reveal">
-          <h3>All Sydney areas</h3>
-          <p>We cover the metro area with 24/7 emergency call-outs, planned maintenance, and repair work across homes and businesses.</p>
-          <a class="btn btn-primary" href="contact.html">Check coverage</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section service-areas-expansion">
-      <div class="container grid">
-        <article class="card reveal">
-          <h3>Property types</h3>
-          <p>Units, terraces, family homes, shopfronts, offices, and renovation sites all need different approaches.</p>
-        </article>
-        <article class="card reveal">
-          <h3>Typical requests</h3>
-          <p>People usually call about power loss, switchboard issues, lighting, safety checks, and new electrical installations.</p>
-        </article>
-        <article class="card reveal">
-          <h3>Why local help matters</h3>
-          <p>Shorter travel time can mean faster fault-finding, better emergency response, and less disruption to the property.</p>
-        </article>
-      </div>
-    </section>
-'@
 
 $blogHub = Join-Path $site 'blog.html'
 Insert-BlockBeforeMainEnd -Path $blogHub -Marker 'blog-hub-expansion' -Block @'
