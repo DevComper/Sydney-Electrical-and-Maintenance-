@@ -215,6 +215,27 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Gallery</h2>
+        <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
+        <style>
+          .home-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+          .home-gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr)}}
+        </style>
+        <div class="home-gallery reveal" style="margin-top:1rem">
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance2.webp" alt="Project 2"/></a>
+          <a href="images.html"><img src="SE&M Images/WhatsApp Image 2026-05-25 at 5.26.46 PM.jpeg" alt="Project 3"/></a>
+          <a href="images.html"><img src="SE&M Images/unnamed.webp" alt="Project 4"/></a>
+        </div>
+        <div style="margin-top:1.25rem">
+          <a class="btn btn-outline" href="images.html">See more project images</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="container split">
         <div class="reveal">
           <h2 class="section-title">Why Sydney clients choose us</h2>
