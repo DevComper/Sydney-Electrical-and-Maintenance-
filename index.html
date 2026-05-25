@@ -219,9 +219,11 @@
         <h2 class="section-title reveal">Gallery</h2>
         <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
         <style>
-          .home-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-          .home-gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
-          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr)}}
+          .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+          .home-gallery img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+          @media (max-width:1200px){.home-gallery img{height:320px}}
+          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr);}.home-gallery img{height:240px}}
+          @media (max-width:600px){.home-gallery img{height:180px}}
         </style>
         <div class="home-gallery reveal" style="margin-top:1rem">
           <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>

@@ -9,8 +9,10 @@
   <style>
     .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .gallery-item { background:#fff; border-radius:12px; overflow:hidden; box-shadow: var(--shadow); }
-    .gallery-item img { width:100%; height:420px; object-fit:cover; display:block; }
+    .gallery-item img { width:100%; height:720px; object-fit:cover; display:block; }
     .gallery-hero { text-align:center; margin:2rem 0; }
+    @media (max-width:1200px){ .gallery-item img{height:560px} }
+    @media (max-width:900px){ .gallery-item img{height:360px} }
     @media (max-width:600px){ .gallery-item img{height:240px} }
   </style>
 </head>
