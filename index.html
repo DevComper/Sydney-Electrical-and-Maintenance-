@@ -214,30 +214,7 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Gallery</h2>
-        <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
-        <style>
-          .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-          .home-gallery img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
-          @media (max-width:1200px){.home-gallery img{height:320px}}
-          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr);}.home-gallery img{height:240px}}
-          @media (max-width:600px){.home-gallery img{height:180px}}
-        </style>
-        <div class="home-gallery reveal" style="margin-top:1rem">
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance2.webp" alt="Project 2"/></a>
-          <a href="images.html"><img src="SE&M Images/WhatsApp Image 2026-05-25 at 5.26.46 PM.jpeg" alt="Project 3"/></a>
-          <a href="images.html"><img src="SE&M Images/unnamed.webp" alt="Project 4"/></a>
-        
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance4.webp" alt="Project 5"/></a>
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance5.webp" alt="Project 6"/></a></div>
-        <div style="margin-top:1.25rem">
-          <a class="btn btn-outline" href="images.html">See more project images</a>
-        </div>
-      </div>
-    </section>
+    <!-- Gallery removed from this position and will be inserted below Service area -->
 
     <section class="section">
       <div class="container split">
@@ -293,6 +270,32 @@
         </div>
         <div style="margin-top: 2rem;">
           <a class="btn btn-outline" href="service-areas.html">View service areas</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insert Gallery after Service area as requested -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Gallery</h2>
+        <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
+        <style>
+          .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+          .home-gallery img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+          @media (max-width:1200px){.home-gallery img{height:320px}}
+          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr);}.home-gallery img{height:240px}}
+          @media (max-width:600px){.home-gallery img{height:180px}}
+        </style>
+        <div class="home-gallery reveal" style="margin-top:1rem">
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance2.webp" alt="Project 2"/></a>
+          <a href="images.html"><img src="SE&M Images/WhatsApp Image 2026-05-25 at 5.26.46 PM.jpeg" alt="Project 3"/></a>
+          <a href="images.html"><img src="SE&M Images/unnamed.webp" alt="Project 4"/></a>
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance4.webp" alt="Project 5"/></a>
+          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance5.webp" alt="Project 6"/></a>
+        </div>
+        <div style="margin-top:1.25rem">
+          <a class="btn btn-outline" href="images.html">See more project images</a>
         </div>
       </div>
     </section>
@@ -364,20 +367,29 @@
     <section class="section homepage-expansion">
       <div class="container split">
         <div class="reveal">
-          <h2 class="section-title">What good electrical work should include</h2>
-          <ul class="list">
-            <li>A proper diagnosis instead of a quick patch.</li>
-            <li>Clear explanation of the fault and the recommended fix.</li>
-            <li>Testing after the work so the result is verified.</li>
-            <li>Advice on related risks that should be watched.</li>
-            <li>Work that leaves the area clean and the system clearly labeled.</li>
-          </ul>
+          <h2 class="section-title">Quick quote request</h2>
+          <p class="section-lead">Tell us what you need and we will respond fast. For emergencies, call now.</p>
+          <a class="btn btn-dark" href="tel:0412396505">Emergency call-out</a>
         </div>
-        <div class="reveal">
-          <h2 class="section-title">How we help Sydney customers</h2>
-          <p class="section-lead">A good service page should answer the question behind the search, not just the keyword. That is what this site is moving toward: useful pages that explain the work, the warning signs, the process, and the next step.</p>
-          <p>For Sydney customers, that usually means a fast response to the immediate issue, followed by a fix that makes the property safer, more reliable, and easier to maintain over time.</p>
-        </div>
+        <form class="form reveal" action="#" method="post">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+          </div>
+          <div class="form-row">
+            <select name="service" required>
+              <option value="">Service needed</option>
+              <option>Emergency electrical</option>
+              <option>Residential electrical</option>
+              <option>Lighting or power upgrade</option>
+              <option>Switchboard or panel issues</option>
+              <option>EV charger install</option>
+            </select>
+            <input type="text" name="suburb" placeholder="Suburb" />
+          </div>
+          <textarea name="message" placeholder="Tell us about the job"></textarea>
+          <button class="btn btn-primary" type="submit">Send request</button>
+        </form>
       </div>
     </section>
     <section class="section homepage-depth-2">
