@@ -215,30 +215,7 @@
     </section>
 
     <!-- Gallery moved above Service area as requested -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Gallery</h2>
-        <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
-        <style>
-          .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-          .home-gallery img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
-          @media (max-width:1200px){.home-gallery img{height:320px}}
-          @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr);}.home-gallery img{height:240px}}
-          @media (max-width:600px){.home-gallery img{height:180px}}
-        </style>
-        <div class="home-gallery reveal" style="margin-top:1rem">
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance2.webp" alt="Project 2"/></a>
-          <a href="images.html"><img src="SE&M Images/WhatsApp Image 2026-05-25 at 5.26.46 PM.jpeg" alt="Project 3"/></a>
-          <a href="images.html"><img src="SE&M Images/unnamed.webp" alt="Project 4"/></a>
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance4.webp" alt="Project 5"/></a>
-          <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance5.webp" alt="Project 6"/></a>
-        </div>
-        <div style="margin-top:1.25rem">
-          <a class="btn btn-outline" href="images.html">See more project images</a>
-        </div>
-      </div>
-    </section>
+    <!-- Gallery will be inserted after Service area -->
 
     <section class="section">
       <div class="container">
@@ -276,35 +253,34 @@
       </div>
     </section>
 
-    <!-- Single Quick quote request kept (removed duplicate) -->
-    <section class="section">
-      <div class="container split">
-        <div class="reveal">
-          <h2 class="section-title">Quick quote request</h2>
-          <p class="section-lead">Tell us what you need and we will respond fast. For emergencies, call now.</p>
-          <a class="btn btn-dark" href="tel:0412396505">Emergency call-out</a>
+      <!-- Gallery inserted below Service area as requested -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Gallery</h2>
+          <p class="section-lead reveal">A selection of recent projects — click through for more images.</p>
+          <style>
+            .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+            .home-gallery img{width:100%;height:360px;object-fit:cover;border-radius:12px;box-shadow:var(--shadow)}
+            @media (max-width:1200px){.home-gallery img{height:320px}}
+            @media (max-width:900px){.home-gallery{grid-template-columns:repeat(2,1fr);}.home-gallery img{height:240px}}
+            @media (max-width:600px){.home-gallery img{height:180px}}
+          </style>
+          <div class="home-gallery reveal" style="margin-top:1rem">
+            <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance1.webp" alt="Project 1"/></a>
+            <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance2.webp" alt="Project 2"/></a>
+            <a href="images.html"><img src="SE&M Images/WhatsApp Image 2026-05-25 at 5.26.46 PM.jpeg" alt="Project 3"/></a>
+            <a href="images.html"><img src="SE&M Images/unnamed.webp" alt="Project 4"/></a>
+            <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance4.webp" alt="Project 5"/></a>
+            <a href="images.html"><img src="SE&M Images/Sydney Elec and Maintenance5.webp" alt="Project 6"/></a>
+          </div>
+          <div style="margin-top:1.25rem">
+            <a class="btn btn-outline" href="images.html">See more project images</a>
+          </div>
         </div>
-        <form class="form reveal" action="#" method="post">
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Full name" required />
-            <input type="tel" name="phone" placeholder="Phone number" required />
-          </div>
-          <div class="form-row">
-            <select name="service" required>
-              <option value="">Service needed</option>
-              <option>Residential electrical services</option>
-              <option>Security system installation</option>
-              <option>Electrical power restoration</option>
-              <option>Electric car charger installation</option>
-              <option>Light fixture installation</option>
-            </select>
-            <input type="text" name="suburb" placeholder="Suburb" />
-          </div>
-          <textarea name="message" placeholder="Tell us about the job"></textarea>
-          <button class="btn btn-primary" type="submit">Send request</button>
-        </form>
-      </div>
-    </section>
+      </section>
+
+    <!-- Single Quick quote request kept (removed duplicate) -->
+    <!-- Quick quote request will be placed at the end (before footer) -->
       <section class="section homepage-expansion">
       <div class="container split">
         <div class="reveal">
@@ -356,6 +332,36 @@
           <h3>Ongoing maintenance</h3>
           <p>For businesses and managed properties, preventative maintenance is often cheaper than emergency work, especially when downtime matters.</p>
         </article>
+      </div>
+    </section>
+
+    <!-- Quick quote request placed as last section before footer -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal">
+          <h2 class="section-title">Quick quote request</h2>
+          <p class="section-lead">Tell us what you need and we will respond fast. For emergencies, call now.</p>
+          <a class="btn btn-dark" href="tel:0412396505">Emergency call-out</a>
+        </div>
+        <form class="form reveal" action="#" method="post">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Full name" required />
+            <input type="tel" name="phone" placeholder="Phone number" required />
+          </div>
+          <div class="form-row">
+            <select name="service" required>
+              <option value="">Service needed</option>
+              <option>Emergency electrical</option>
+              <option>Residential electrical</option>
+              <option>Lighting or power upgrade</option>
+              <option>Switchboard or panel issues</option>
+              <option>EV charger install</option>
+            </select>
+            <input type="text" name="suburb" placeholder="Suburb" />
+          </div>
+          <textarea name="message" placeholder="Tell us about the job"></textarea>
+          <button class="btn btn-primary" type="submit">Send request</button>
+        </form>
       </div>
     </section>
   </main>
