@@ -165,14 +165,9 @@ img {
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1.5rem;
-  width: min(100% - 1rem, 1360px);
+  width: min(100% - 2.5rem, var(--max));
   margin: 0 auto;
-  padding: 0.9rem 1.25rem;
-  background: rgba(246, 247, 243, 0.92);
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(64, 64, 66, 0.08);
-  border-radius: 999px;
-  box-shadow: var(--shadow);
+  padding: 0.3rem 0;
 }
 
 .logo {
@@ -790,9 +785,8 @@ img {
   }
 
   .nav-wrap {
-    width: min(100% - 1rem, 1360px);
-    border-radius: 28px;
-    padding: 0.8rem 0.9rem;
+    width: min(100% - 1.25rem, var(--max));
+    padding: 0.25rem 0;
     grid-template-columns: auto 1fr auto;
   }
 
