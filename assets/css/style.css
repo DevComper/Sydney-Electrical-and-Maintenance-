@@ -91,6 +91,19 @@ img {
   color: var(--muted);
 }
 
+/* 1. REGISTER THE ANGLE PROPERTY FOR THE RACETRACK EFFECT */
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes driveAround {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
 .btn, .hero-form {
   position: relative;
   isolation: isolate;
@@ -106,20 +119,20 @@ img {
 }
 
 .hero-form::before {
-  inset: -6px;
-  padding: 6px;
-  background: conic-gradient(from 0deg, var(--green), #ffffff, var(--green), #ffffff, var(--green));
-  animation: cleanRotate 4s linear infinite;
+  inset: -8px; /* Increased to -8px to make it noticeably thicker and visible */
+  padding: 8px;
+  background: conic-gradient(from var(--border-angle), var(--green), #ffffff, var(--green), #ffffff, var(--green));
+  animation: driveAround 4s linear infinite; /* Constantly driving around the perimeter */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
 
 .btn::before {
-  inset: -4px;
-  padding: 4px;
-  background: conic-gradient(from 0deg, var(--green), #ffffff, var(--green));
-  animation: cleanRotate 3s linear infinite;
+  inset: -5px; /* Increased to -5px to make it pop on buttons */
+  padding: 5px;
+  background: conic-gradient(from var(--border-angle), var(--green), #ffffff, var(--green));
+  animation: driveAround 3s linear infinite; /* Constantly driving around the perimeter */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -128,10 +141,6 @@ img {
 .hero-form .form::before,
 .form::before {
   display: none !important;
-}
-
-@keyframes cleanRotate {
-  100% { transform: rotate(360deg); }
 }
 
 .btn-primary {
