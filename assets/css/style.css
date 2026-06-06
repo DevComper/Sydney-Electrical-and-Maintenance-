@@ -121,9 +121,9 @@ img {
 .hero-form::before {
   content: "";
   position: absolute;
-  inset: -24px; /* 3x wider footprint outward (from -8px to -24px) */
-  padding: 24px; /* Matches inset to keep the inner form box clean */
-  border-radius: calc(var(--radius) + 24px); /* Scales radius dynamically */
+  inset: -8px;
+  padding: 8px;
+  border-radius: inherit;
   pointer-events: none;
   z-index: -1;
   background: conic-gradient(from var(--border-angle), var(--green), #ffffff, var(--green), #ffffff, var(--green));
@@ -131,16 +131,14 @@ img {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  /* Adds a massive structural glow spread */
-  box-shadow: 0 0 30px rgba(120, 188, 65, 0.4), 0 0 60px rgba(255, 255, 255, 0.3);
 }
 
 .btn::before {
   content: "";
   position: absolute;
-  inset: -15px; /* 3x wider footprint outward (from -5px to -15px) */
-  padding: 15px; /* Matches inset to protect button shape */
-  border-radius: 999px; /* Maintains perfectly rounded button border */
+  inset: -5px;
+  padding: 5px;
+  border-radius: inherit;
   pointer-events: none;
   z-index: -1;
   background: conic-gradient(from var(--border-angle), var(--green), #ffffff, var(--green));
@@ -148,8 +146,6 @@ img {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  /* Adds a massive button glow spread */
-  box-shadow: 0 0 20px rgba(120, 188, 65, 0.5);
 }
 
 .hero-form .form::before,
