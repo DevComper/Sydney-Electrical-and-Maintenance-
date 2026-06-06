@@ -115,17 +115,41 @@ img {
   border-radius: inherit;
   padding: 2px;
   background:
-    linear-gradient(90deg, rgba(120, 188, 65, 0.02), rgba(120, 188, 65, 0.72), rgba(255, 255, 255, 0.96), rgba(120, 188, 65, 0.72), rgba(120, 188, 65, 0.02)) 0 0 / 220% 100%,
-    linear-gradient(135deg, rgba(15, 17, 19, 0.18), rgba(120, 188, 65, 0.18));
-  animation: border-flow 3.2s linear infinite;
-  opacity: 0.95;
+    linear-gradient(90deg, rgba(120, 188, 65, 0.05), rgba(120, 188, 65, 0.85), rgba(255, 255, 255, 0.95), rgba(120, 188, 65, 0.85), rgba(120, 188, 65, 0.05)) 0 0 / 240% 100%,
+    linear-gradient(135deg, rgba(15, 17, 19, 0.08), rgba(120, 188, 65, 0.18));
+  animation: border-flow 4.8s linear infinite;
+  opacity: 0.9;
   pointer-events: none;
   z-index: 0;
+  filter: url(#turbulent-displace);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
-  filter: drop-shadow(0 0 6px rgba(120, 188, 65, 0.18));
+  box-shadow: 0 0 0 1px rgba(120, 188, 65, 0.14), 0 0 18px rgba(120, 188, 65, 0.12);
+}
+
+.btn-primary::before,
+.btn-dark::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.95), rgba(120, 188, 65, 0.95), rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.02)) 0 0 / 240% 100%,
+    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(120, 188, 65, 0.24));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.14);
+  opacity: 0.98;
+  filter: url(#turbulent-displace) saturate(1.15);
+}
+
+.btn-outline::before {
+  background:
+    linear-gradient(90deg, rgba(15, 17, 19, 0.04), rgba(120, 188, 65, 0.88), rgba(255, 255, 255, 0.95), rgba(120, 188, 65, 0.88), rgba(15, 17, 19, 0.04)) 0 0 / 240% 100%,
+    linear-gradient(135deg, rgba(15, 17, 19, 0.12), rgba(120, 188, 65, 0.18));
+}
+
+.hero-form::before,
+.form::before {
+  background:
+    linear-gradient(90deg, rgba(120, 188, 65, 0.02), rgba(120, 188, 65, 0.72), rgba(255, 255, 255, 0.94), rgba(120, 188, 65, 0.72), rgba(120, 188, 65, 0.02)) 0 0 / 240% 100%,
+    linear-gradient(135deg, rgba(15, 17, 19, 0.08), rgba(120, 188, 65, 0.12));
 }
 
 .btn:hover::before,
@@ -647,6 +671,23 @@ img {
   border-radius: var(--radius);
   border: 1px solid rgba(64, 64, 66, 0.08);
   box-shadow: var(--shadow);
+}
+
+.hero-form::before,
+.form::before {
+  inset: 0;
+  padding: 2px;
+}
+
+.hero-form::before,
+.form::before {
+  opacity: 0.95;
+}
+
+.btn::before {
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
 }
 
 .form input,
